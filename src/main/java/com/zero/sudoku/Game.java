@@ -49,6 +49,14 @@ public class Game {
 		populateValues(startingValues);
 	}
 
+	/**
+	 * Try to inser the value at the given position and mark with the color provided.
+	 * If the value is not allowed at the given position, its inserted with Color.RED
+	 * @param row
+	 * @param col
+	 * @param value
+	 * @param color
+	 */
 	public void tryAndInsert(int row, int col, int value, Color color) {
 		int result = verifyInput(row, col, value);
 		
@@ -71,11 +79,6 @@ public class Game {
 	 * @return
 	 */
 	public int verifyInput(int row, int col, int value) {
-
-//		// TODO :: Check this condition
-//		if (board[row][col].getValue() != 0) {
-//			return 0;
-//		}
 
 		for (int r = 0; r < NUMBER_OF_ROWS; r++) {
 			if (board[r][col].getValue() == value) {
