@@ -1,14 +1,14 @@
 # Sudoku
 
-This project implements a 9X9 Sudoku game with the following features\
+This project implements a 9X9 Sudoku game with the following features.
 
 	1. Initialise the Sudoku game with default/custom values
 	2. Insert value at a given position (row/col)
 	3. Search value at a given position (row/col)
 
 ## Tools/Technologies
-	Java
-	Maven
+	Java - JDK 7 or above is required to run the project
+	Maven - Maven installation is not required (packaged mvnw for running without installing maven locally)
 	
 ## Build/Run
 
