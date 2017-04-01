@@ -2,20 +2,19 @@ package com.zero.sudoku;
 
 import java.util.Scanner;
 
+import com.zero.sudoku.Game.Color;
 import com.zero.sudoku.model.Cell;
-import com.zero.sudoku.model.Color;
 
 public class GameApp {
 
 	public static void main(String[] args) {
 		
-		Game game = new Game();
-		game.initialize();
+		Game game = new Game(Game.DEFAULT_BOARD_START);
 		
 		game.printMatrix(true);
 
         Scanner scanner = new Scanner(System.in);
-        
+
         while (true) {
 
         	System.out.print("Enter Choices \n 1 - Insert \n 2 - Search \n 3 - Quit \n : ");
@@ -28,7 +27,7 @@ public class GameApp {
 
 	            String[] values = input.split(":");
 	            
-	    		game.tryAndInsert(Integer.parseInt(values[0]), Integer.parseInt(values[1]), Integer.parseInt(values[2]), Color.WHITE);
+	    		game.placeItem(Integer.parseInt(values[0]), Integer.parseInt(values[1]), Integer.parseInt(values[2]), Color.WHITE);
 	
 	    		game.printMatrix(true);
 	            System.out.println("-----------\n");

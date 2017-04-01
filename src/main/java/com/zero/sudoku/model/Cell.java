@@ -1,5 +1,7 @@
 package com.zero.sudoku.model;
 
+import com.zero.sudoku.Game.Color;
+
 public class Cell {
 
 	private Color cellColor;
